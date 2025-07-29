@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Himalayan Furniture | Creative Portfolio</title>
+  <title>Himalayan Furniture | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Header -->
   <header>
-  <div class="container">
-    <h1>Himalayan Furniture</h1>
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="container header-inner">
+      <span class="logo">Himalayan Furniture</span>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="mainNav" aria-label="Main navigation">
+        <ul id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
 
-  <!-- Main Content -->
-  <main>
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">Bold. Timeless. Inspired by the Himalayas.</h1>
+        <p class="hero-desc">
+          Discover premium, handcrafted furniture that elevates every space with a touch of Himalayan spirit.
+        </p>
+      </div>
+    </section>
 
     <!-- Slider -->
-    <section class="slider">
+    <section class="slider" aria-label="Featured Products Slider">
       <div class="slides">
         <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="Mountain Oak Chair" />
         <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" alt="Minimalist Coffee Table" />
         <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Rustic Bed Frame" />
       </div>
       <div class="slide-text">
-        <h2>Bold. Timeless. Inspired by the Himalayas.</h2>
-        <p>Discover premium, handcrafted furniture that elevates every space.</p>
+        <h2>Signature Pieces</h2>
+        <p>Modern design, Himalayan soul.</p>
       </div>
     </section>
 
@@ -51,8 +56,7 @@
       <h3>About Us</h3>
       <p>
         Himalayan Furniture curates elegant pieces blending modern design with rugged Himalayan spirit.
-        Every item is a testament to fine craftsmanship and enduring quality—crafted for contemporary living yet
-        inspired by timeless natural beauty.
+        Every item is a testament to fine craftsmanship and enduring quality—crafted for contemporary living yet inspired by timeless natural beauty.
       </p>
     </section>
 
@@ -93,14 +97,13 @@
     <section id="contact" class="contact-section">
       <h3>Contact</h3>
       <form id="contactForm">
-        <input type="text" name="name" placeholder="Name*" required />
-        <input type="email" name="email" placeholder="Email*" required />
-        <textarea name="message" placeholder="Message*" required></textarea>
+        <input type="text" name="name" placeholder="Name*" required aria-label="Your name"/>
+        <input type="email" name="email" placeholder="Email*" required aria-label="Your email"/>
+        <textarea name="message" placeholder="Message*" required aria-label="Your message"></textarea>
         <button type="submit">Send Message</button>
         <p id="formStatus"></p>
       </form>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -121,5 +124,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
